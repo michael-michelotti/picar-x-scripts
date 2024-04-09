@@ -26,6 +26,17 @@ def main():
         px.set_dir_servo_angle(angle)
         time.sleep(0.01)
 
+    for angle in range(0, 35):
+        px.set_cam_tilt_angle(angle)
+        time.sleep(0.01)
+    for angle in range(35, -35, -1):
+        px.set_cam_tilt_angle(angle)
+        time.sleep(0.01)
+    for angle in range(-35, 0):
+        px.set_cam_tilt_angle(angle)
+        time.sleep(0.01)
+
+
     while True:
         key = readchar.readkey().lower()
         print(key)
